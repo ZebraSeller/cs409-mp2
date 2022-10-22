@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/mp2/" element={<Home />}/>
           <Route exact path="/mp2/list" element={<List />}/>
           <Route exact path="/mp2/gallery" element={<Gallery />}/>
-          <Route exact path="/mp2/detail" element={<Detail />}/>
+          <Route path="/detail" element={<Detail />}/>
           <Route path="*" element={<NotFound />}/>
           <Route element={<NotFound />}/>
         </Routes>
