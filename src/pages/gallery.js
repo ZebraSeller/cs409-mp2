@@ -14,7 +14,6 @@ function App() {
     const dataHolder = document.getElementById('gallery-items-container');
     const filter = document.getElementById('filter-selection').value;
     let cards = [];
-
     //FETCH from PokeAPI
     for (let i = 1; i < 906; i++) {
       const result = await Axios.get('https://pokeapi.co/api/v2/pokemon/' + i, {
