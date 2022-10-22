@@ -72,6 +72,7 @@ function App() {
         <option value="wXL">Extra Heavy Weight &#40; &gt; 1250 &#41;</option>
       </select>
       <button onClick={search}>Apply Filter</button>
+      
       <div id="gallery-items-container">
         <h1>Please wait while the resouces are being loaded...</h1>
       </div>
