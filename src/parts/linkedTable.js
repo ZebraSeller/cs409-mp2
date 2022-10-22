@@ -7,7 +7,7 @@ function App({
   content
 }) {
   const handleClick = (num) => {
-    window.location.href="./detail/#" + num;
+    window.location.href="/detail/#" + num;
   };
 
   const rows = [];
