@@ -15,9 +15,9 @@ function App() {
         <NavBar navTitle="MP2 PokeAPI"/>
         <Routes>
           <Route exact path="/" element={<Home />}/>
-          <Route exact path="/list" element={<List />}/>
-          <Route exact path="/gallery" element={<Gallery />}/>
-          <Route exact path="/detail" element={<Detail />}/>
+          <Route path="/list" element={<List />}/>
+          <Route path="/gallery" element={<Gallery />}/>
+          <Route path="/detail" element={<Detail />}/>
           <Route path="*" element={<NotFound />}/>
           <Route element={<NotFound />}/>
         </Routes>
