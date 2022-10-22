@@ -2,16 +2,11 @@ import React from 'react';
 import Axios from 'axios';
 import {useLocation} from 'react-router-dom';
 import {createRoot} from 'react-dom/client';
-import { useNavigate } from "react-router-dom";
 
 import './detail.scss'
 
 function App() {
-  const navigate = useNavigate();
-  const goTO = (num) => {
-    navigate("/detail#" + num);
-  }
-
+  console.log("on Detail Page");
   const pageURL = useLocation();
   let detailContent;
   const fetchAPI = async (index) => {
@@ -83,10 +78,10 @@ function App() {
   };
 
   const prevPage = () => {
-    goTO(parseInt(pageURL.hash.replace('#', '')) - 1);
+    window.location.href="/detail#" + (parseInt(pageURL.hash.replace('#', '')) - 1);
   }
   const nextPage = () => {
-    goTO(parseInt(pageURL.hash.replace('#', '')) + 1);
+    window.location.href="/detail#" + (parseInt(pageURL.hash.replace('#', '')) + 1);
   }
 
   React.useEffect(() => { //run on load.
