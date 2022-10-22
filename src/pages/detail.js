@@ -1,7 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import {Link, useLocation} from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import {useLocation} from 'react-router-dom';
 import {createRoot} from 'react-dom/client';
 
 import './detail.scss'
