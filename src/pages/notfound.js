@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div id='home-container'>
+    <div id='notfound-container'>
       <h1>404</h1>
       <h3>Go TO List View or Gallery For More.</h3>
     </div>

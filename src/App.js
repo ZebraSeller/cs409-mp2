@@ -4,6 +4,7 @@ import Home from './pages/home';
 import List from './pages/list';
 import Detail from './pages/detail';
 import Gallery from './pages/gallery';
+import NotFound from './pages/notfound';
 
 import './App.css';
 
@@ -17,8 +18,8 @@ function App() {
           <Route exact path="/list" element={<List />}/>
           <Route exact path="/gallery" element={<Gallery />}/>
           <Route exact path="/detail" element={<Detail />}/>
-          {/* <Route path="*" component={<NotFound />}/>
-          <Route component={<NotFound />}/> */}
+          <Route path="*" element={<NotFound />}/>
+          <Route element={<NotFound />}/>
         </Routes>
       </div>
     </Router>
