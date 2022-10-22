@@ -2,11 +2,15 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import LinkedTable from '../parts/linkedTable';
 import Axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 import './list.scss';
 
 function App() {
-  
+  const navigate = useNavigate();
+  const goTO = (num) => {
+    navigate("/detail#" + num);
+  }
   const search = async () => {
     const dataHolder = document.getElementById('data-holder');
     const textBoxValue = document.getElementById("search-bar").value;
@@ -65,7 +69,7 @@ function App() {
     }
     console.log(searchResults);
 
-    const linkedTable = <LinkedTable content={searchResults}/>;
+    const linkedTable = <LinkedTable content={searchResults} func={goTO}/>;
     const root = createRoot(dataHolder);
     root.render(linkedTable);
   };
