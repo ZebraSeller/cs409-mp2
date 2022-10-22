@@ -20,7 +20,7 @@ function App() {
     console.log(result);
     let typeString = '';
     result.data.types.forEach(el => {
-      if (typeString.length != 0) {
+      if (typeString.length !== 0) {
         typeString += ", ";
       }
       typeString += el.type.name;
@@ -87,7 +87,7 @@ function App() {
 
   React.useEffect(() => { //run on load.
     console.log("hash is " + pageURL.hash);
-    if (pageURL.hash != '') {
+    if (pageURL.hash !== '') {
       fetchAPI(pageURL.hash.replace('#', ''));
       const dataHolder = createRoot(document.getElementById("detail-holder"));
       setTimeout(() => {dataHolder.render(detailContent);}, 250);
