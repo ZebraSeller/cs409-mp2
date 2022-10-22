@@ -11,7 +11,7 @@ function App({navTitle}) {
       <Link className='nav-bar-button' to='/mp2/' id='home-button'>Home</Link>
       <Link className='nav-bar-button' to='/mp2/list' id='list'>List View</Link>
       <Link className='nav-bar-button' to='/mp2/gallery' id='gallery'>Gallery</Link>
-      <Link className='nav-bar-button' to='/mp2/detail' id='detail'>Gallery</Link>
+      <Link className='nav-bar-button' to='/mp2/detail' id='detail'>Detail</Link>
     </div>
   );
 }
