@@ -78,10 +78,10 @@ function App() {
   };
 
   const prevPage = () => {
-    window.location.href="/#/detail#" + (parseInt(pageURL.hash.replace('#', '')) - 1);
+    window.location.href="/detail#" + (parseInt(pageURL.hash.replace('#', '')) - 1);
   }
   const nextPage = () => {
-    window.location.href="/#/detail#" + (parseInt(pageURL.hash.replace('#', '')) + 1);
+    window.location.href="/detail#" + (parseInt(pageURL.hash.replace('#', '')) + 1);
   }
 
   React.useEffect(() => { //run on load.
