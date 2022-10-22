@@ -1,6 +1,6 @@
 {
   "homepage": "http://zebraseller.github.io/cs409-mp2",
-  "name": "mp2",
+  "name": "cs409-mp2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

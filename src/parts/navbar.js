@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import './navbar.scss';
 
@@ -16,8 +15,5 @@ function App({navTitle}) {
   );
 }
 
-App.proptype = {
-  navTitle : PropTypes.string.isRequired
-}
 
 export default App;

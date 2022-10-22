@@ -11,12 +11,13 @@ import './App.css';
 //import { useEffect } from 'react';
 
 function App() {
+  console.log("publicURL is " + process.env.PUBLIC_URL);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavBar navTitle="PokeAPI"/>
         <Routes>
-          <Route exact path="/" element={<Home />}/>
+          <Route path="/" exact element={<Home />}/>
           <Route path="/list" element={<List />}/>
           <Route path="/gallery" element={<Gallery />}/>
           <Route path="/detail" element={<Detail />}/>
