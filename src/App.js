@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as HashRouter, Route, Routes} from 'react-router-dom';
 import NavBar from './parts/navbar';
 import Home from './pages/home';
 import List from './pages/list';
@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <NavBar navTitle="MP2 PokeAPI"/>
         <Routes>
@@ -22,7 +22,7 @@ function App() {
           <Route element={<NotFound />}/>
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
