@@ -1,4 +1,4 @@
-import {HashRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 //import {useLocation} from 'react-router-dom';
 import NavBar from './parts/navbar';
 import Home from './pages/home';
@@ -12,6 +12,7 @@ import './App.css';
 
 function App() {
   return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <HashRouter basename={process.env.PUBLIC_URL}>
           <NavBar navTitle="MP2 PokeAPI"/>
@@ -25,6 +26,7 @@ function App() {
           </Routes>
         </HashRouter>
       </div>
+    </BrowserRouter>
   );
 }
 
