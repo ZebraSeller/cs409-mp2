@@ -1,5 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
+import {Link, useLocation} from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import {createRoot} from 'react-dom/client';
 import GalleryItem from './galleryItem';
 // import './gallery.scss';

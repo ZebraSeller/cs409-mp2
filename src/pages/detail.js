@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
-import {useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import {createRoot} from 'react-dom/client';
 
 import './detail.scss'
@@ -19,7 +20,7 @@ function App() {
     console.log(result);
     let typeString = '';
     result.data.types.forEach(el => {
-      if (typeString.length !== 0) {
+      if (typeString.length != 0) {
         typeString += ", ";
       }
       typeString += el.type.name;
@@ -38,8 +39,8 @@ function App() {
         <tr>
           <th>Image</th>
           <th>
-            <img src={result.data.sprites.front_default} alt="img not found" width="320px"/>
-            <img src={result.data.sprites.back_default} alt="img not found" width="320px"/>
+            <img src={result.data.sprites.front_default} alt="img" width="320px"/>
+            <img src={result.data.sprites.back_default} alt="img" width="320px"/>
           </th>
         </tr>
         <tr>
@@ -69,8 +70,8 @@ function App() {
         <tr>
           <th>Additional Artwork</th>
           <th>
-            <img src={result.data.sprites.other.home.front_default} alt="img not found" width="320px"/>
-            <img src={result.data.sprites.other.dream_world.front_default} alt="img not found" width="320px"/>
+            <img src={result.data.sprites.other.home.front_default} alt="img" width="320px"/>
+            <img src={result.data.sprites.other.dream_world.front_default} alt="img" width="320px"/>
           </th>
         </tr>
       </table>
@@ -86,7 +87,7 @@ function App() {
 
   React.useEffect(() => { //run on load.
     console.log("hash is " + pageURL.hash);
-    if (pageURL.hash !== '') {
+    if (pageURL.hash != '') {
       fetchAPI(pageURL.hash.replace('#', ''));
       const dataHolder = createRoot(document.getElementById("detail-holder"));
       setTimeout(() => {dataHolder.render(detailContent);}, 250);

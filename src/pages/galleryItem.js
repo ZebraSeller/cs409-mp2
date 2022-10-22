@@ -17,7 +17,7 @@ function App({
   return (
     <div className='gallery-item' onClick={() => {handleClick(id);}}>
       <h3>{id}</h3>
-      <img src={imageURL} alt="img not found"/>
+      <img src={imageURL}/>
       <h3>{name}</h3>
       <h3>Weight: {weight}</h3>
       <h3>Height: {height}</h3>

@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Redirect} from 'react-router-dom';
 import NavBar from './parts/navbar';
 import Home from './pages/home';
 import List from './pages/list';
@@ -7,6 +7,8 @@ import Gallery from './pages/gallery';
 
 
 import './App.css';
+
+const abc = 15
 
 function App() {
   return (
