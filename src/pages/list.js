@@ -6,6 +6,7 @@ import Axios from 'axios';
 import './list.scss';
 
 function App() {
+  
   const search = async () => {
     const dataHolder = document.getElementById('data-holder');
     const textBoxValue = document.getElementById("search-bar").value;

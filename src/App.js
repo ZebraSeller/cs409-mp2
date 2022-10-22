@@ -1,4 +1,5 @@
-import {HashRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+//import {useLocation} from 'react-router-dom';
 import NavBar from './parts/navbar';
 import Home from './pages/home';
 import List from './pages/list';
@@ -7,10 +8,11 @@ import Gallery from './pages/gallery';
 import NotFound from './pages/notfound';
 
 import './App.css';
+//import { useEffect } from 'react';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavBar navTitle="MP2 PokeAPI"/>
         <Routes>
@@ -22,7 +24,7 @@ function App() {
           <Route element={<NotFound />}/>
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

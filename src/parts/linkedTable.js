@@ -5,7 +5,10 @@ function App({
   content
 }) {
   const handleClick = (num) => {
-    window.location.href="/#/detail#" + num;
+    window.location.href="/detail#" + num;
+    // let history = useNavigate();
+    // history("/detail#" + num);
+    //window.history.pushState("", "", "/detail#" + num);
     // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
   };
 
