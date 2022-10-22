@@ -1,0 +1,16 @@
+#detail-table {
+  margin: auto;
+  width: 50vw;
+}
+
+.detail-button {
+  margin: 4vw;
+  font-size: 24px;
+  width: 8vw;
+  padding: 8px;
+  border-radius: 8px;
+  transition-duration: 0.2s;
+}
+.detail-button:hover {
+  background-color: brown;
+}

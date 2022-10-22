@@ -1,0 +1,33 @@
+$nav-bar-height: 5vh;
+#nav-bar-container {
+  height: $nav-bar-height;
+  width: 100vw;
+  background-color: lightblue;
+  display: flex;
+  justify-content:space-around;
+}
+@mixin nav-bar-button {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  width: 10vw;
+  height: $nav-bar-height;
+  font-family: 'Lucida Sans';
+  line-height: $nav-bar-height;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+.nav-bar-button {
+  @include nav-bar-button;
+  color: white;
+  background-color: dodgerblue;
+}
+.nav-bar-button:hover {
+  color:white;
+  background-color:deepskyblue;
+}
+
+.nav-bar-title {
+  @include nav-bar-button;
+  color: dodgerblue;
+}

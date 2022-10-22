@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Lucida Sans';
+  font-size: 16px;
 }
 
 .App-logo {
@@ -35,4 +37,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  border: 1px solid lightskyblue;
+  margin: 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+  padding: 0px;
+}
+tr:nth-child(even) {
+  background-color: lightskyblue;
+}
+
+button {
+  margin-left: 1vw;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
 }
