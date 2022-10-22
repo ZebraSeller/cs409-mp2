@@ -2,9 +2,14 @@ import React from 'react';
 import Axios from 'axios';
 import {createRoot} from 'react-dom/client';
 import GalleryItem from './galleryItem';
+import { useNavigate } from "react-router-dom";
 // import './gallery.scss';
 
 function App() {
+  const navigate = useNavigate();
+  const goTO = (num) => {
+    navigate("/detail#" + num);
+  }
   const search = async () => {
     const dataHolder = document.getElementById('gallery-items-container');
     const filter = document.getElementById('filter-selection').value;
@@ -24,6 +29,7 @@ function App() {
         moves={result.data.moves.length}
         height={result.data.height}
         weight={result.data.weight}
+        func={goTO}
       />;
       switch (filter) {
         case "wS":
@@ -80,24 +86,3 @@ function App() {
 }
 
 export default App;
-
-// async function fetchAPI() {
-//   let items = [];
-//   for (let i = 1; i < 5; i++) {
-//     const result = await Axios.get('https://pokeapi.co/api/v2/pokemon/' + i, {
-//     }).catch(function (error) {
-//       console.log(error);
-//       return;
-//     });
-//     let item = <GalleryItem
-//       id={result.data.id}
-//       name={result.data.name}
-//       imageURL={result.data.sprites.front_default}
-//       moves={result.data.moves.length}
-//       height={result.data.height}
-//       weight={result.data.weight}
-//     />;
-//     items.push(item);
-//   }
-//   console.log(items);
-// };
