@@ -6,6 +6,7 @@ import {createRoot} from 'react-dom/client';
 import './detail.scss'
 
 function App() {
+  console.log("on Detail Page");
   const pageURL = useLocation();
   let detailContent;
   const fetchAPI = async (index) => {
