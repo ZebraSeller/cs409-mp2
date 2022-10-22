@@ -2,14 +2,9 @@ import React from 'react';
 import Axios from 'axios';
 import {createRoot} from 'react-dom/client';
 import GalleryItem from './galleryItem';
-import { useNavigate } from "react-router-dom";
 // import './gallery.scss';
 
 function App() {
-  const navigate = useNavigate();
-  const goTO = (num) => {
-    navigate("/detail#" + num);
-  }
   const search = async () => {
     const dataHolder = document.getElementById('gallery-items-container');
     const filter = document.getElementById('filter-selection').value;
@@ -29,7 +24,6 @@ function App() {
         moves={result.data.moves.length}
         height={result.data.height}
         weight={result.data.weight}
-        func={goTO}
       />;
       switch (filter) {
         case "wS":

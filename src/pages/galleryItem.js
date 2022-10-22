@@ -9,15 +9,14 @@ function App({
   imageURL,
   moves,
   height,
-  weight,
-  func
+  weight
 }) {
-  // const handleClick = (num) => {
-  //   window.location.href="/mp2/detail#" + num;
-  //   // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
-  // };
+  const handleClick = (num) => {
+    window.location.href="/mp2/detail#" + num;
+    // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
+  };
   return (
-    <div className='gallery-item' onClick={() => {func(id);}}>
+    <div className='gallery-item' onClick={() => {handleClick(id);}}>
       <h3>{id}</h3>
       <img src={imageURL} alt="img"/>
       <h3>{name}</h3>
@@ -34,8 +33,7 @@ App.proptype = {
   imageURL : PropTypes.string.isRequired,
   moves : PropTypes.number.isRequired,
   height : PropTypes.number.isRequired,
-  weight : PropTypes.number.isRequired,
-  func : PropTypes.func.isRequired
+  weight : PropTypes.number.isRequired
 }
 
 export default App;
