@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function App({
-  content,
-  func=null
+  content
 }) {
   const handleClick = (num) => {
     window.location.href="/mp2/detail#" + num;
@@ -16,8 +15,7 @@ function App({
   const rows = [];
   content.forEach(el => {
     const item = 
-        // <tr onClick={() => {handleClick(el[0])}}>
-        <tr onClick={() => {func(el[0])}}>
+        <tr onClick={() => {handleClick(el[0])}}>
           <th>{el[0]}</th>
           <th>{el[1]}</th>
         </tr>;
