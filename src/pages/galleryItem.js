@@ -12,8 +12,8 @@ function App({
   weight
 }) {
   const handleClick = (num) => {
-    // window.location.href="/mp2/detail#" + num;
-    window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
+    window.location.href="/detail/#" + num;
+    // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
   };
   return (
     <div className='gallery-item' onClick={() => {handleClick(id);}}>

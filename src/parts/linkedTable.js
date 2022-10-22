@@ -5,8 +5,8 @@ function App({
   content
 }) {
   const handleClick = (num) => {
-    // window.location.href="/mp2/detail/#" + num;
-    window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
+    window.location.href="/detail/#" + num;
+    // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
   };
 
   const rows = [];
