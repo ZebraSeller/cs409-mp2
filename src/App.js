@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <NavBar navTitle="MP2 PokeAPI"/>
+        <NavBar navTitle="PokeAPI"/>
         <Routes>
           <Route exact path="/" element={<Home />}/>
           <Route path="/list" element={<List />}/>
