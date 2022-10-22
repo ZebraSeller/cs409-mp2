@@ -4,7 +4,6 @@ import Home from './pages/home';
 import List from './pages/list';
 import Detail from './pages/detail';
 import Gallery from './pages/gallery';
-import NotFound from './pages/notfound';
 
 import './App.css';
 
