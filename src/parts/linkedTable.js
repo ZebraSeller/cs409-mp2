@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from "react-router-dom";
 
 function App({
   content,
   func=null
 }) {
   // const navigate = useNavigate();
-  const handleClick = (num) => {
-    window.location.href="/#/detail#" + num;
-    // let history = useNavigate();
-    // history("/detail#" + num);
-    //window.history.pushState("", "", "/detail#" + num);
-    // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
-  };
+  // const handleClick = (num) => {
+  //   window.location.href="/#/detail#" + num;
+  //   // let history = useNavigate();
+  //   // history("/detail#" + num);
+  //   //window.history.pushState("", "", "/detail#" + num);
+  //   // window.history.replaceState(null, "Details", "/mp2/detail/#" + num);
+  // };
 
   const rows = [];
   content.forEach(el => {
